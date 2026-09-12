@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Prathmesh Pagare - IT Student and Cloud & DevOps Learner. Explore my projects, skills and experience.">
+
+    <title>Prathmesh Pagare | Cloud & DevOps Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0f1c;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 10%;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.15;
+        }
+
+        .hero-text span {
+            background: linear-gradient(90deg, #4facfe, #d946ef);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-text p {
+            margin-top: 25px;
+            color: #e9ebef;
+            font-size: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            margin-right: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: linear-gradient(90deg, #4facfe, #d946ef);
+            color: white;
+            border: none;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(217, 70, 239, 0.3);
+        }
+
+        .secondary {
+            background: transparent;
+            border: 1px solid #555;
+            color: white;
+        }
+
+        .secondary:hover {
+            border-color: #a855f7;
+            transform: translateY(-3px);
+        }
+
+        /* ================= IMAGE ================= */
+
+        .hero img {
+            width: 350px;
+            max-width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 0 50px rgba(217, 70, 239, 0.45);
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            scroll-margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            padding: 90px 10%;
+        }
+
+        .about p {
+            color: #9ca3af;
+            max-width: 750px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin-top: 35px;
+            max-width: 900px;
+        }
+
+        .skill-card {
+            background: #111827;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #1f2937;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #8b5cf6;
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            padding: 90px 10%;
+        }
+
+        .projects-intro {
+            color: #9ca3af;
+            margin-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+        }
+
+        .project-card {
+            background: linear-gradient(145deg, #111827, #0f172a);
+            border: 1px solid #263244;
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: #8b5cf6;
+            filter: blur(80px);
+            opacity: 0.12;
+            top: -60px;
+            right: -50px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #8b5cf6;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .project-label {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.15);
+            color: #c084fc;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .project-card h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 span {
+            background: linear-gradient(90deg, #4facfe, #d946ef);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .project-card p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tech-stack span {
+            background: #1f2937;
+            color: #d1d5db;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            padding: 90px 10%;
+        }
+
+        .contact p {
+            color: #9ca3af;
+            margin-bottom: 25px;
+        }
+
+        .contact form {
+            max-width: 650px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #263244;
+            background: #111827;
+            color: white;
+            outline: none;
+        }
+
+        textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #8b5cf6;
+        }
+
+        button.submit {
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #4facfe, #d946ef);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar {
+            position: fixed;
+            right: 20px;
+            top: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .sidebar a {
+            width: 50px;
+            height: 50px;
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            transform: scale(1.1);
+            border-color: #8b5cf6;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b7280;
+            border-top: 1px solid #1f2937;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 768px) {
+
+            .hero {
+                min-height: auto;
+                padding: 70px 8%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 48px;
+            }
+
+            .hero-text p {
+                font-size: 17px;
+            }
+
+            .hero img {
+                width: 350px;
+                margin-top: 20px;
+            }
+
+            .about,
+            .projects,
+            .contact {
+                padding: 70px 8%;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .sidebar {
+                right: 10px;
+            }
+
+            .sidebar a {
+                width: 42px;
+                height: 42px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>
+                Hi, I'm
+                <br>
+                <span>Prathmesh Pagare</span>
+            </h1>
+
+            <p>
+                Cloud & DevOps Learner | IT Student
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn primary">
+                    View Projects
+                </a>
+
+                <a href="#" class="btn secondary">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+        <img src="./profile.jpg" alt="Prathmesh Pagare profile photo">
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            I am an IT engineering student passionate about Cloud Computing,
+            DevOps, automation and software development. I enjoy building
+            practical projects that solve real-world problems and exploring
+            technologies used to deploy, monitor and manage modern applications.
+        </p>
+
+
+        <div class="skills">
+
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Linux</div>
+            <div class="skill-card">Networking</div>
+            <div class="skill-card">Git & GitHub</div>
+            <div class="skill-card">CI/CD</div>
+            <div class="skill-card">Docker</div>
+            <div class="skill-card">Kubernetes</div>
+            <div class="skill-card">AWS</div>
+            <div class="skill-card">Terraform</div>
+            <div class="skill-card">Bash</div>
+            <div class="skill-card">Prometheus</div>
+            <div class="skill-card">Grafana</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="projects" id="projects">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <p class="projects-intro">
+            A collection of projects where I apply Cloud, DevOps,
+            automation and software development concepts to real-world problems.
+        </p>
+
+
+        <div class="project-grid">
+
+            <!-- OPSPILOT -->
+
+            <div class="project-card">
+
+                <span class="project-label">
+                    Featured Project
+                </span>
+
+                <h3>
+                    <span>OpsPilot.ai</span>
+                </h3>
+
+                <p>
+                    An AI-powered DevOps and cloud operations platform designed
+                    to simplify infrastructure workflows, automation,
+                    monitoring and troubleshooting using intelligent assistance.
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+                    <span>AI</span>
+                    <span>DevOps</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>Linux</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://opspilot-ai-1-1i5c.onrender.com"
+   class="btn primary"
+   target="_blank"
+   rel="noopener noreferrer">
+    Live Project
+</a><!-- Replace # with your real OpsPilot website -->
+                    
+
+                    <!-- Replace # with your GitHub repository -->
+                    <a href="#" class="btn secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECOND PROJECT -->
+
+            <div class="project-card">
+
+                <span class="project-label">
+                    Cloud & DevOps
+                </span>
+
+                <h3>
+                    Self-Healing Cricket Cloud Platform
+                </h3>
+
+                <p>
+                    A cloud-native platform designed with monitoring,
+                    containerization and automated recovery concepts to
+                    improve application reliability and observability.
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Prometheus</span>
+                    <span>AWS</span>
+                    <span>Python</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                   <a href="#" class="btn primary">
+    View Project
+</a>
+
+                    <a href="#" class="btn secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            Interested in working together or discussing a project?
+            Feel free to reach out.
+        </p>
+
+        <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+
+            <input type="hidden" name="_subject" value="Portfolio Contact">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                required
+            >
+
+            <textarea
+                placeholder="Message"
+                name="message"
+                required
+            ></textarea>
+
+            <button class="submit" type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div class="sidebar">
+
+        <a href="#home" title="Home">🏠</a>
+
+        <a href="#about" title="About">👤</a>
+
+        <a href="#projects" title="Projects">💻</a>
+
+        <a href="#contact" title="Contact">✉️</a>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Prathmesh Pagare. Built with HTML & CSS.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
